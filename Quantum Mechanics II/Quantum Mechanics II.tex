@@ -31,32 +31,16 @@
 \end{titlepage}
 
 
-\section{Definitions}
-Linear Vector Space: Collection of objects
-\begin{align*}
-|v\rangle + |w\rangle \ \varepsilon& \, V
-\\
-a(|v\rangle + |w\rangle) =& a|v\rangle + a|w\rangle
-\\
-a(b|v\rangle) =& b(a|v\rangle)
-\\
-|v\rangle + |w\rangle =& |w\rangle + |v\rangle
-\\
-|v\rangle + (|w\rangle + |x\rangle) =& 
-(v\rangle + |w\rangle) + |x\rangle
-\\
-\text{There needs to be a null vector} (|0\rangle) \rightarrow& |v\rangle + |0\rangle = 0 
-\\
-\text{For every vector (v) there is an inverse} &
-|v\rangle + |-v\rangle = |0\rangle
-\end{align*}
+
 
 
 \subsection*{2022-09-07}
 
 \section{Vector Spaces}
 
-\textbf{Def.} Linear Vector Space: Collection of objects which follow the rules below
+\subsection*{Definition} 
+
+Linear Vector Space: Collection of objects which follow the rules below...
 \begin{align*}
 |v\rangle + |w\rangle \ \varepsilon& \, V
 \\
@@ -71,9 +55,200 @@ a(b|v\rangle) =& b(a|v\rangle)
 \\
 \text{There needs to be a null vector} (|0\rangle) \rightarrow& |v\rangle + |0\rangle = 0 
 \\
-\text{For every vector (v) there is an inverse} &
+\text{For every vector, v, there is an inverse: } &
 |v\rangle + |-v\rangle = |0\rangle
 \end{align*}
+
+\subsection*{Definition} The number a,b are elements of a field \textbf{F}
+\begin{align*}
+F =& R \rightarrow \text{real}
+\\
+F =& C \rightarrow \text{complex}
+\end{align*}
+
+\subsection*{Definition} 
+\begin{align*}
+(a,b,c) + (d,e,f) =& (a+d,b+e,c+f)
+\\
+\alpha(a,b,c) =& (\alpha a, \alpha b, \alpha c)
+\\ 
+\text{null vector} \rightarrow |0\rangle =& (0,0,0)
+\\
+\text{inverse} \rightarrow (-a,-b,-c) =& |-v\rangle
+\\
+(a,b,c) \neq& \text{A Vector Space}
+\end{align*}
+Above is not a vector space because it isn't closed under addition.
+
+\subsection*{Definition} 
+\textbf{Linear Independence:} a set of vectors such as $\lbrace |1\rangle, |2\rangle, \dots, |n\rangle$ is linearly independent if the only solution to $\sum a_i |i\rangle = |0\rangle$ is $a_1 = a_2 = \dots = a_i = 0$
+\\
+\\
+\textbf{Example:}
+\begin{align*}
+|1\rangle =& 
+\begin{bmatrix}
+0 & 1 \\
+0 & 0
+\end{bmatrix}
+|2\rangle =
+\begin{bmatrix}
+1 & 1 \\
+0 & 1
+\end{bmatrix}
+|3\rangle =
+\begin{bmatrix}
+2 & -1 \\
+0 & 2
+\end{bmatrix}
+\end{align*}
+This is not an example of linear independence because $|3\rangle + 2|3\rangle -|1\rangle = |0\rangle$
+
+\subsection*{Definition}
+\textbf{Dimension:} is a vector space of dimension n IFF it can accommodate a max of n LI vectors.\\
+\\
+An n-dimensional real vector space $= V^n(R)$\\
+\\
+An n-dimensional complex vector space $= V^n(C)$
+
+\subsection*{Theorem}
+\textbf{A Basis:} is a set of n LI vectors in a n-dimensional vector space.
+\begin{align*}
+|v\rangle =& \sum^n_{i=n}v_i |e_i\rangle
+\end{align*}
+The expression of a vector, $|v\rangle$ in terms of a particular basis is unique.
+
+\subsection*{Example:}
+Find the space of all $2\times2$ matrices.
+\begin{align*}
+v =& 
+\begin{bmatrix}
+a&b\\
+c&d
+\end{bmatrix}
+\\
+dim(V) =& ???
+\\
+|1\rangle,|2\rangle,|3\rangle,|4\rangle =&
+\bigg\{
+\begin{bmatrix}
+1&0\\
+0&0
+\end{bmatrix}
+\begin{bmatrix}
+0&1\\
+0&0
+\end{bmatrix}
+\begin{bmatrix}
+0&0\\
+1&0
+\end{bmatrix}
+\begin{bmatrix}
+0&0\\
+0&1
+\end{bmatrix}
+\bigg\}
+\\
+\therefore \, n =& 4
+\end{align*}
+
+\section{Inner Product Space}
+To define an analogue to length and angle, we need to define an inner product: $\langle v|w\rangle$.\\
+\\
+Inner product is a rule for taking two vectors/ functions and 
+'getting out' a number.
+\begin{enumerate}
+\item Skew-symmetric: $\langle v|w\rangle = \langle w|v\rangle*$
+\item Positive semi definite: $\langle v | v \rangle \geq 0$
+\item Linearly in Ket: $\langle v|(a|w\rangle+b|x\rangle) = a\langle v|w\rangle + b\langle v|x\rangle = \langle v |aw + bx\rangle$
+\end{enumerate}
+
+\subsection*{Example:}
+What if a bra vector was a linear super position?
+\begin{align*}
+\langle aw + bx|v\rangle =& \langle v |aw + bx\rangle^*
+= a^*\langle v|w\rangle^* + b^*\langle v|x\rangle^*
+= \boxed{a^*\langle w|v\rangle + b^*\langle x|v\rangle}
+\end{align*}
+Inner products are antilinear in the bra vector.
+\begin{align*}
+\langle \Psi|\Psi \rangle =& \int \Psi^*(x)\Psi(x) dx
+\end{align*}
+
+\subsection*{Definition:}
+\begin{enumerate}
+\item Two vectors are orthogonal if $\langle v|w \rangle = 0$
+\item The Norm of vectors is defined as $\sqrt{\langle v|v \rangle} = |v|$
+\item A set of unit vectors that are mutually orthogonal are said to constitute an \textbf{orthonormal basis}.
+\end{enumerate}
+
+\subsection*{Example:}
+Inner product of $|v\rangle$ and $|w\rangle$. 
+\begin{align*}
+|v\rangle =& \sum_{i=1}^n v_i |e_i\rangle
+\\
+|w\rangle =& \sum_{j=1}^n w_j |e_j\rangle
+\\
+\langle v|w \rangle =& \sum_{i=1}^n \sum_{j=1}^n v_i^*\langle e_i|e_j \rangle w_j
+\\
+\langle e_i|e_j \rangle =& \delta_{ij}
+\\
+\delta_{ij} =& 1 \text{  if i=j}
+\\
+\langle v|w \rangle =& \sum_i v_i^*w_i
+\end{align*}
+
+\subsection*{Example:}
+The expression of $|v\rangle$ in the basis $\lbrace |e_i \rangle\rbrace$ can be written using the projection operator.
+\begin{align*}
+\hat{p} |v\rangle =& \sum_i |e_i\rangle\langle e_i|v\rangle  
+\\
+v_i =& \langle e_i |v\rangle
+\\
+\hat{p} |v\rangle =& \sum_i v_i|e_i \rangle 
+\\
+\hat{p} =& \sum |e_i\rangle\langle e_i| = 1
+\end{align*}
+This is the statement of the completeness of the basis.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
