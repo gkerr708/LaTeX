@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.28)  7 SEP 2022 22:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.28)  10 SEP 2022 11:48
 entering extended mode
 **"./Quantum Mechanics II.tex"
 (Quantum Mechanics II.tex
@@ -147,31 +147,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--160
 
  []
 
-[2] [3] [4] (Quantum Mechanics II.aux) ) 
+[2] [3]
+Overfull \hbox (3.14597pt too wide) in paragraph at lines 213--215
+\OT1/cmr/m/n/12 Since $[]\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 v\OMS/cmsy/m/n/12 i
+ \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 v\OMS/cmsy/m/n/12 i$\OT1/
+cmr/m/n/12 , we see that $[] = 1$ is the iden-tity. The ex-pres-sion $[][] \OMS
+/cmsy/m/n/12 j\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 ih\OML/cmm/m/it/12 e[]\OMS/c
+msy/m/n/12 i \OT1/cmr/m/n/12 =
+ []
+
+[4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 316--320
+
+ []
+
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 397--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--410
+
+ []
+
+[9] [10] (Quantum Mechanics II.aux) ) 
 Here is how much of TeX's memory you used:
  1576 strings out of 478927
  21091 string characters out of 2852535
- 319557 words of memory out of 3000000
+ 324557 words of memory out of 3000000
  19472 multiletter control sequences out of 15000+600000
  410499 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,14n,66p,276b,181s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/gkerr/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gkerr/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gkerr/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gk
-err/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/
-Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
-sfonts/cm/cmr17.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gkerr/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on "Quantum Mechanics II.pdf" (5 pages, 139065 bytes).
+ 56i,16n,66p,358b,186s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/gkerr/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gkerr/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gkerr/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/gkerr
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Use
+rs/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr12.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmr17.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb><C:/Users/gkerr/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gkerr/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/gkerr/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/gkerr/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Quantum Mechanics II.pdf" (11 pages, 179367 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

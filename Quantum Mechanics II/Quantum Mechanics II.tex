@@ -182,7 +182,7 @@ Inner products are antilinear in the bra vector.
 \item A set of unit vectors that are mutually orthogonal are said to constitute an \textbf{orthonormal basis}.
 \end{enumerate}
 
-\subsection*{Example:}
+\subsection*{Example 1:}
 Inner product of $|v\rangle$ and $|w\rangle$. 
 \begin{align*}
 |v\rangle =& \sum_{i=1}^n v_i |e_i\rangle
@@ -198,7 +198,7 @@ Inner product of $|v\rangle$ and $|w\rangle$.
 \langle v|w \rangle =& \sum_i v_i^*w_i
 \end{align*}
 
-\subsection*{Example:}
+\subsection*{Example 2:}
 The expression of $|v\rangle$ in the basis $\lbrace |e_i \rangle\rbrace$ can be written using the projection operator.
 \begin{align*}
 \hat{p} |v\rangle =& \sum_i |e_i\rangle\langle e_i|v\rangle  
@@ -208,12 +208,233 @@ v_i =& \langle e_i |v\rangle
 \hat{p} |v\rangle =& \sum_i v_i|e_i \rangle 
 \\
 \hat{p} =& \sum |e_i\rangle\langle e_i| = 1
+\\
+\hat{p} |v\rangle =& |v\rangle
 \end{align*}
-This is the statement of the completeness of the basis.
+Since $\hat{p} |v\rangle = |v\rangle$, we see that $\hat{p} = 1$ is the identity. The expression $\sum_i |e_i\rangle \langle e_i\rangle = 1$ is a statement of the completeness condition. 
 
+\subsection*{Example 3:}
+$|v\rangle$ in Example 1 can be written as a column vector:
+\begin{align*}
+|v\rangle =&
+\begin{bmatrix}
+v_1\\
+v_2\\
+...\\
+v_n\\
+\end{bmatrix}
+\end{align*}
+Therefore...
+\begin{align*}\\
+\langle v|w \rangle =&  
+\begin{bmatrix}
+v_1^*&v_2^*&...&v_n^*
+\end{bmatrix}
+\begin{bmatrix}
+w_1\\
+w_2\\
+...\\
+w_n
+\end{bmatrix}
+\end{align*}
 
+\subsection*{Theorem}
+The triangle inequality: $|v+w| \leq |v| + |w|$
 
+\subsection*{Theorem}
+The Swartz inequality: $\langle v|w \rangle \leq |v||w|$
 
+\subsection*{2022-09-09}
+
+\section{Outer Products}
+The outer product between a ket $|w\rangle$ and a bar $\langle v|$ is:
+\begin{align*}
+|v_i\rangle\langle w_i| =& 
+\begin{bmatrix}
+v_1\\v_2\\ \vdots \\v_n
+\end{bmatrix}
+\begin{bmatrix}
+w_1^*&w_2^*&...&w_n^*
+\end{bmatrix}
+= 
+\begin{bmatrix}
+v_1^*w_1 & v_1^*w_2  &  \cdots & v_1^*w_n \\	
+v_2^*w_1 & \ddots    &         & \vdots \\
+\vdots &             &  \ddots & \vdots\\
+v_n^*w_1 & \cdots    &  \cdots & v_n^*w_n
+\end{bmatrix}
+\end{align*}
+The projector operator in Example 3 is an example of an outer product.
+
+\subsection*{Example:}
+Consider $\mathbb{V}^3$ with basis $|e_1\rangle$, $|e_2\rangle$, $|e_3\rangle$.
+\begin{align*}
+|e_2\rangle\langle e_2| =&
+\begin{bmatrix}
+0\\1\\0
+\end{bmatrix}
+\begin{bmatrix}
+0&1&0
+\end{bmatrix}
+=
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{bmatrix}
+\\
+\sum_{i=1}^3 |e_i\rangle\langle e_i| =& 
+\begin{bmatrix}
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{bmatrix}\backslash
+\end{align*}
+i.e, the outer product between two orthonormal vectors, $|e_i\rangle\langle e_j|$\\
+$|e_i\rangle$, $|e_j\rangle \varepsilon \mathbb{V}^n$ is a $n\times n$ dimensional matrix with zero everywhere except the elements in row i, col j.
+
+\section{Dual Vector Spaces}
+For every vector $|v\rangle$ in $\mathbb{V}^n$ we associate a bra vector $\langle v| = |v\rangle^\dagger$\\
+The basis $\langle v|$ also form a vector space, that is separate and distinct from $|v\rangle$, but related to it. 
+\subsection*{Example}
+For ket $|v\rangle = |av_1 + bv_2\rangle$ we associate a bra $\langle v| = \langle av_1 + bv_2| = \langle v_1|a^*+\langle v_2|b_2^*$.
+
+\section{Subspaces}
+\subsection*{Definition:}
+A subset of vectors $\mathbb{V}^n$ that itself forms a vector space $\mathbb{v}_i^{n_i}$ is called a subspace of $\mathbb{V}^n$.
+\subsection*{Definition:}
+The sum of two vector spaces $\mathbb{V}_i^{n_i}$ and $\mathbb{V}_j^{m_j}$ is written :
+\begin{align*}
+\mathbb{V}_i^{n_i} \oplus \mathbb{V}_j^{m_j} =& \mathbb{V}_k^{P_k}
+\end{align*}
+is defined as having (i) all elements of $\mathbb{V}_i^{n_i}$, (ii) all elements $\mathbb{V}_j^{m_j}$ and (iii) all combination of the two.
+\subsection*{Example:}
+$\mathbb{V}_x^1$ is a vector space containing the vectors along $\hat{x}$.\\
+$\mathbb{V}_y^1$ is a vector space containing the vectors along $\hat{y}$.\\
+$\mathbb{V}_x^1 \oplus \mathbb{V}_y^1 = \mathbb{V}_{xy}^2$
+\subsection*{Example:}
+$\mathbb{V}_1^{n_i}$, $\mathbb{V}_2^{n_j}$ are two subspaces where every element of $\mathbb{V}_1^{n_i}$ $\perp$ $\mathbb{V}_2^{n_j}$.\\
+If $\mathbb{V}_1^{n_i} \oplus \mathbb{V}_2^{n_j} = \mathbb{V}^n$, then prove $n_i + n_j = n$.\\
+\\
+Consider $|v_\alpha \rangle \in \mathbb{V}_1^{n_i}$ and $|v_\beta \rangle \in \mathbb{V}_2^{n_j}$
+\begin{align*}
+|v_\alpha\rangle + |v_\beta\rangle =& \sum_{i=1}^{n_i} v_{\alpha i} |e_i\rangle + \sum_{j=1}^{n_j} v_{\beta j} |e_j\rangle 
+\\
+=& \sum_{i=1}^{n_i+n_j} v_{\alpha + \beta, i}\,|e_i'\rangle,\,\,\, 
+|e_i'\rangle =  \lbrace |e_{i=1},\dots,e_{n_i},e_{j=1},\dots,,e_{n_j}\rbrace
+\end{align*}
+Since the $|e_i'\rangle$ are orthogonal, they are linearly independent. The maximum number of linearly independent vectors in $\mathbb{V}^n$ is therefore $n_i+n_j$. Therefore the dimension of $\mathbb{V}^n$ in $n = n_i+n_j$.
+
+\section{Operators}
+An operator converts a ket into another ket. e.g. $|1\rangle, |2\rangle,|3\rangle$ corresponds to $|\hat{x}\rangle, |\hat{y}\rangle,|\hat{z}\rangle$. An operator describing a rotation about $\hat{z}$-axis by $90^\circ$, $R_{\pi/2}(\hat{z})$:
+\begin{align*}
+R_{\pi/2}(\hat{z})|1\rangle =& |2\rangle,\,\,R_{\pi/2}(\hat{z})|2\rangle  = |-1\rangle,\,\,R_{\pi/2}(\hat{z})|3\rangle  = |3\rangle
+\end{align*}
+The matrix notation for an operator $\hat{C}$ can be found by operating $\hat{C}$ on  the basis vectors $\lbrace|r_j\rangle\rbrace$ and then projecting the result back onto the basis with $\mathbb{\hat{P}}= \sum_i |e_i\rangle\langle e_i|$.
+\begin{align*}
+|a_j\rangle =& \hat{C}|e_j\rangle
+\\
+|a_j\rangle =& \sum_i |e_i\rangle\langle e_i|\hat{C}|e_j\rangle
+\\
+\langle e_i|\hat{C}|e_j\rangle =& C_{ij}
+\\
+C_{ij} =&
+\begin{bmatrix}
+\langle e_1|\hat{C}|e_1\rangle & \cdots & \langle e_1|\hat{C}|e_n\rangle\\
+\vdots & \ddots & \vdots\\
+\langle e_n|\hat{C}|e_1\rangle & \cdots & \langle e_n|\hat{C}|e_n\rangle\\
+\end{bmatrix}
+\\
+|a_j\rangle =& \sum_i |e_i\rangle C_{ij}
+\end{align*}
+To express the vector $ |w\rangle = \hat{C} |v\rangle, \, |v\rangle \in \mathbb{V}^n$, in matrix form, use $\mathbb{\hat{P}}$ twice:
+\begin{align*}
+\sum_i|e_i\rangle\langle e_i|w\rangle =& \sum_{ij} |e_i\rangle\langle e_i|\hat{C}|e_j\rangle \langle e_j|v\rangle
+\\
+\sum_i|e_i\rangle w_i =& \sum_{ij} |e_i\rangle C_{ij}v_j
+\end{align*}
+In matrix form:
+\begin{align*}
+\begin{bmatrix}
+w_1 \\  \vdots \\ w_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+C_{11} & \cdots & C_{1n} \\
+\vdots & \ddots & \vdots \\
+C_{n1} & \cdots & C_{nn} 
+\end{bmatrix}
+\begin{bmatrix}
+v_1 \\  \vdots \\ v_n
+\end{bmatrix}
+\end{align*}
+It is useful to remember that the $j^{th}$ column is the $j^{th}$ transformed basis vector: $\hat{C}|e_j\rangle = \sum_i |e_i\rangle C_{ij}$.
+\section{Product of Operators}
+\begin{align*}
+(AB)_{ij} =& \langle e_i|\hat{A}\hat{B}|e_j\rangle 
+\\
+\sum_k |e_k\rangle \langle e_k| =& \mathbb{P} = 1 
+\\
+(AB)_{ij} =& \sum_k\langle e_i|\hat{A}|e_k\rangle \langle e_k|\hat{B}|e_j\rangle
+\\
+(AB)_{ij} =& \sum_k A_{ik}B_{kj}
+\end{align*}
+\section{Adjoint Operator}
+For a scalar a, $a|v\rangle = |av\rangle$ and the corresponding $\langle av| = \langle v|a^*$ \\
+For an operator $\hat{C}$, $\hat{C}|v\rangle = |\hat{C} v \rangle$, we define the adjoint operator $\hat{C}^\dagger$ such that $\langle \hat{C}v| = \langle v|C^{\dagger}$. The form of $C^\dagger$ is the best demonstrated acting on a basis:
+\begin{align*}
+C^\dagger_{ij} = \langle e_i|\hat{C}^\dagger|e_j\rangle 
+\\
+C^\dagger_{ij} = \langle \hat{C}e_i|e_j\rangle 
+\\
+C^\dagger_{ij} = \langle e_j|\hat{C}e_i\rangle ^*
+\\
+C^\dagger_{ij} = \langle e_j|\hat{C}|e_i\rangle ^*
+\\
+C^\dagger_{ij} = C_{ij}
+\end{align*}
+\subsection*{Definition:}
+\textbf{Hermitian Operator}: An operator is hermitian if $\hat{C}^\dagger = \hat{C}$\\
+\\
+\textbf{Anti-hermitian Operator}: an operator is anti-hermitian if $\hat{C}^\dagger = -\hat{C}$\\
+\\	
+\textbf{Unitary Operator}: an operator $\hat{U}$ is unitary if $U^\dagger U = I, \, i.e. \, U^\dagger = U^{-1}$
+
+\textbf{Example:} a rotation matrix is \textbf{unitary} if $R_\theta^\dagger(\hat{z}) = R_{-\theta}(\hat{z}) = R_\theta^{-1}(\hat{z})$.
+
+\section{Hermitian Operators}
+\subsection*{Theorem:}
+The eigenvalues of a hermitian operator are real.\\
+\\
+\textbf{Proof:} Consider an operator with eigenvalues w:
+\begin{align*}
+\Omega|w\rangle =& w|w\rangle
+\\
+\langle w|\Omega |w\rangle =& w\langle w|w\rangle, \,\, eq.1
+\\
+\langle w|\Omega w\rangle =& w\langle w|w\rangle
+\\
+\langle w|\Omega w\rangle^* =& w^*\langle w|w\rangle
+\\
+\langle\Omega w| w\rangle =& w^*\langle w|w\rangle
+\\
+\langle w|\Omega^\dagger| w\rangle =& w^*\langle w|w\rangle, \,\,eq.2
+\end{align*}
+If $\hat{\Omega}$ is hermitian, $\hat{\Omega}^\dagger = \hat{\Omega} \rightarrow w^* = w \rightarrow w \in \mathbb{R}$.
+\subsection*{Theorem:}
+For every Hermitian matrix, there exists an orthonormal set of eigenvectors. It is diagonal in this basis an it has its eigenvalues as diagonal elements.
+\subsection*{Theorem:}
+For two commuting hermitian operators $\hat{\Omega}, \hat{\Lambda}$ there exists a basis of eigenvectors that diagonalize them both:
+\begin{align*}
+\hat{\Omega}|w\rangle =& w|w\rangle
+\\
+\hat{\Lambda}|\lambda\rangle =& \lambda|\lambda	\rangle
+\end{align*}
+Because $\left[\hat{\Omega},\hat{\Lambda}\right]=0$...
+\begin{align*}
+\hat{\Lambda}\hat{\Omega}|\lambda\rangle =& \hat{\Omega}\hat{\Lambda}|\lambda\rangle = \lambda(\Omega|\lambda)
+\end{align*} 
+Therefore $\hat{\Omega}|\lambda\rangle$ is an eigenvector of $\hat{\Lambda}$. The eigenvectors are, however unique up to a scale factor $\rightarrow \hat{\Omega}|\lambda\rangle = w|\lambda\rangle$. Therefore $|\lambda\rangle$ is an eigenvector of both $\hat{\Omega}$ and $\hat{\Lambda}$, and therefore diagonalize them both.  
 
 
 
