@@ -57,10 +57,10 @@
 \\
 (\hat{\sigma}\cdot\hat{n})^2 =& 
 \left(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z\right)
-\cdot \left(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z\right)
+\cdot \left(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z\right) 
 \\
 (\hat{\sigma}\cdot\hat{n})^2 =& 
-\left(n_x^2\sigma_x^2 + n_y^2\sigma_y^2 + n_z^2\sigma_z^2\right)
+\left(n_x^2\sigma_x^2 + n_y^2\sigma_y^2 + n_z^2\sigma_z^2\right)\text{ *think this is probably untrue}
 \\
 (\hat{\sigma}\cdot\hat{n})^2 =& 
 \left(n_x^2 + n_y^2 + n_z^2\right)
@@ -99,8 +99,26 @@ Show this by explicit calculation.
 \\
 \section{Spin in a magnetic field}
 
+\begin{align*}
+i\hbar \dfrac{\partial}{\partial t} |\chi(t)\rangle =& -\mu\cdot B|\chi(t)\rangle
+\end{align*}\\
+\\
 (a) Write down the classical equation of motion for the spin using Newton's second law. In other words, write an equation of the time evolution of the angular moment by setting the time
 derivative of angular momentum equal to the torque.
+\begin{align*}
+F =& ma
+\\
+F =& m \dfrac{d^2}{dt^2}r
+\\
+\tau =& F\cdot r
+\\
+\tau =& ma\cdot r
+\\
+\dfrac{d\omega}{dt} =& \tau
+\\
+\dfrac{d\omega}{dt} =& ma\cdot r
+\end{align*}
+
 
 
 
