@@ -1,0 +1,138 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{amsfonts, amssymb,amsmath}
+\usepackage{graphicx}
+\usepackage{dsfont}
+\linespread{1} 
+\addtolength{\oddsidemargin}{0.0in}
+\addtolength{\textwidth}{0.0in}
+\addtolength{\textheight}{0.0in}
+\addtolength{\voffset}{0.0in}
+
+\begin{document}
+
+\begin{titlepage}
+   \begin{center}
+       \vspace*{0.5cm}
+
+       \LARGE{\textbf{Assignment 1}}
+
+       \vspace{1cm}
+        \Large{Quantum Mechanics II}
+            
+       \vspace{1cm}
+		\small{Gavin Kerr (B00801584)} \\
+		\vfill
+		\includegraphics[scale=0.65]{dal_logo2.png}
+       \vfill
+           \large{PHYC 4151}
+            
+       \vspace{0.8cm}
+     
+            
+       Physics and Atmospheric Science\\
+       Dalhousie University\\
+       2022-09-21
+            
+   \end{center}
+\end{titlepage}
+
+
+
+
+\section{Properties of Pauli matrices}
+(a) Show that $(\hat{\sigma}\cdot\hat{n})^2 = \mathds{1}$.
+
+\begin{align*}
+\hat{n} =& n_x\hat{x} + n_y\hat{y} + n_z\hat{z}
+\end{align*}
+\begin{align*}
+(\hat{\sigma}\cdot\hat{n})^2 =& 
+\left(\hat{\sigma} \cdot (n_x\hat{x} + n_y\hat{y} + n_z\hat{z})\right)^2
+\\
+(\hat{\sigma}\cdot\hat{n})^2 =& 
+\left(n_x (\hat{\sigma}\cdot\hat{x}) + n_y(\hat{\sigma}\cdot\hat{y}) + n_z(\hat{\sigma}\cdot\hat{z}))\right)^2
+\\
+(\hat{\sigma}\cdot\hat{n})^2 =& 
+\left(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z\right)^2
+\\
+(\hat{\sigma}\cdot\hat{n})^2 =& 
+\left(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z\right)
+\cdot \left(n_x\sigma_x + n_y\sigma_y + n_z\sigma_z\right)
+\\
+(\hat{\sigma}\cdot\hat{n})^2 =& 
+\left(n_x^2\sigma_x^2 + n_y^2\sigma_y^2 + n_z^2\sigma_z^2\right)
+\\
+(\hat{\sigma}\cdot\hat{n})^2 =& 
+\left(n_x^2 + n_y^2 + n_z^2\right)
+\begin{bmatrix}
+1&0\\0&1
+\end{bmatrix}
+\\
+(\hat{\sigma}\cdot\hat{n})^2 =& 
+\begin{bmatrix}
+1&0\\0&1
+\end{bmatrix}
+\\
+\end{align*}
+\\
+(b) As the Pauli matrices are proportional to spin -1/2 angular moment operators, they satisfy the same algebra as angular momentum operators,
+\begin{align*}
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 2i\sum_l \epsilon_{jkl}\hat{\sigma}_l
+\end{align*}
+Show this by explicit calculation.
+\begin{align*}
+\hat{\sigma}_j\hat{\sigma}_k - \hat{\sigma}_k\hat{\sigma}_j
+\end{align*}
+\\
+\\
+(c) Show that they also satisfy what are known as anti-commutation relations:
+\begin{align*}
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+ \equiv& \hat{\sigma}_j \hat{\sigma}_k + \hat{\sigma}_k,\hat{\sigma}_j = 2\mathds{1}\delta_{jk}
+\end{align*}
+\\
+\\
+(d) Use the commutation and anti-commutation relations to prove the product rule:
+\begin{align*}
+\hat{\sigma}_j \hat{\sigma}_k =& \sigma_{jk} + i\sum_l \epsilon_{jkl}\sigma_l
+\end{align*}
+\\
+\\
+\section{Spin in a magnetic field}
+
+(a) Write down the classical equation of motion for the spin using Newton's second law. In other words, write an equation of the time evolution of the angular moment by setting the time
+derivative of angular momentum equal to the torque.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
