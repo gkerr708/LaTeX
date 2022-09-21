@@ -40,11 +40,30 @@
 
 
 \section{Properties of Pauli matrices}
-(a) Show that $(\hat{\sigma}\cdot\hat{n})^2 = \mathds{1}$.
+The Pauli matrices are defined by,
+\begin{align*}
+\hat{\sigma}_x =&
+\begin{bmatrix}
+0&1\\1&0
+\end{bmatrix}
+\hat{\sigma}_y =
+\begin{bmatrix}
+0&-i\\i&0
+\end{bmatrix}
+\hat{\sigma}_z =
+\begin{bmatrix}
+1&0\\0&-1
+\end{bmatrix}
+\end{align*}
+They have a number of useful properties. It is easy to verify that the square of any of these matrices: $\hat{\sigma}_i^2 = \mathds{1}$. To generalize this, let us define an abstract vector $\hat{\sigma}$ whose three components are the three Pauli matrices. A vector whose components are matrices sounds very bizarre at first, but is a convenient notation as ...
+
+\subsection*{(a)}
+Show that $(\hat{\sigma}\cdot\hat{n})^2 = \mathds{1}$.
 
 \begin{align*}
 \hat{n} =& n_x\hat{x} + n_y\hat{y} + n_z\hat{z}
 \end{align*}
+
 \begin{align*}
 (\hat{\sigma}\cdot\hat{n})^2 =& 
 \left(\hat{\sigma} \cdot (n_x\hat{x} + n_y\hat{y} + n_z\hat{z})\right)^2
@@ -74,41 +93,149 @@
 \end{bmatrix}
 \\
 \end{align*}
-\\
-(b) As the Pauli matrices are proportional to spin -1/2 angular moment operators, they satisfy the same algebra as angular momentum operators,
+
+
+
+\subsection*{(b)}
+ As the Pauli matrices are proportional to spin -1/2 angular moment operators, they satisfy the same algebra as angular momentum operators,
 \begin{align*}
 \left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 2i\sum_l \epsilon_{jkl}\hat{\sigma}_l
 \end{align*}
-Show this by explicit calculation.
+Show this by explicit calculation.\\
+\\
+For jkl = 1,2,3
 \begin{align*}
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 
 \hat{\sigma}_j\hat{\sigma}_k - \hat{\sigma}_k\hat{\sigma}_j
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =&
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
+\begin{bmatrix}0&-i\\i&0\end{bmatrix} -
+\begin{bmatrix}0&-i\\i&0\end{bmatrix}
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =&
+\begin{bmatrix}i&0\\0&-i\end{bmatrix} +
+\begin{bmatrix}i&0\\0&-i\end{bmatrix} 
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =&
+\begin{bmatrix}2i&0\\ 0&-2i\end{bmatrix}
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =&
+2i\begin{bmatrix}1&0\\ 0&-1\end{bmatrix}
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =&
+2i\hat{\sigma}_l
 \end{align*}
+For j,k,l = 2,3,1
+\begin{align*}
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 
+\hat{\sigma}_j\hat{\sigma}_k - \hat{\sigma}_k\hat{\sigma}_j
 \\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 
+\begin{bmatrix}0&-i\\i&0\end{bmatrix}
+\begin{bmatrix}1&0\\0&-1\end{bmatrix} -
+\begin{bmatrix}1&0\\0&-1\end{bmatrix}
+\begin{bmatrix}0&-i\\i&0\end{bmatrix}
 \\
-(c) Show that they also satisfy what are known as anti-commutation relations:
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& \begin{bmatrix}0&2i\\ 2i&0\end{bmatrix}
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 2i\begin{bmatrix}0&1\\ 1&0\end{bmatrix}
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 2i\hat{\sigma}_l
+\end{align*}
+for j,k,l = 3,1,2
+\begin{align*}
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 
+\hat{\sigma}_j\hat{\sigma}_k - \hat{\sigma}_k\hat{\sigma}_j
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 
+\begin{bmatrix}1&0\\0&-1\end{bmatrix} 
+\begin{bmatrix}0&1\\1&0\end{bmatrix} -
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
+\begin{bmatrix}1&0\\0&-1\end{bmatrix} 
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& \begin{bmatrix}0&2\\ -2&0\end{bmatrix}
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 2i\begin{bmatrix}0&-i\\ i&0\end{bmatrix}
+\\
+\left[\hat{\sigma}_j,\hat{\sigma}_k\right] =& 2i\hat{\sigma}_l
+\end{align*}
+
+Do the same thing but with the negative cases from grif. p 217\\
+\\
+Therefore, $\boxed{  \left[\hat{\sigma}_j,\hat{\sigma}_k\right] = 2i\sum_l \epsilon_{jkl}\hat{\sigma}_l }$
+
+
+
+\subsection*{(c)} 
+Show that they also satisfy what are known as anti-commutation relations:
 \begin{align*}
 \left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+ \equiv& \hat{\sigma}_j \hat{\sigma}_k + \hat{\sigma}_k,\hat{\sigma}_j = 2\mathds{1}\delta_{jk}
 \end{align*}
+For cases where $j \neq k$...
+\begin{align*}
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+ \equiv& \hat{\sigma}_j \hat{\sigma}_k + \hat{\sigma}_k,\hat{\sigma}_j 
 \\
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+=& 
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
+\begin{bmatrix}0&-i\\i&0\end{bmatrix} +
+\begin{bmatrix}0&-i\\i&0\end{bmatrix}
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
 \\
-(d) Use the commutation and anti-commutation relations to prove the product rule:
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+=& 
+\begin{bmatrix}i&0\\0&-i\end{bmatrix} +
+\begin{bmatrix}-i&0\\0&i\end{bmatrix}
+\\
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+=& 0
+\end{align*}
+For cases where $j = k$...
+\begin{align*}
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+ \equiv& \hat{\sigma}_j \hat{\sigma}_k + \hat{\sigma}_k,\hat{\sigma}_j 
+\\
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+=& 
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
+\begin{bmatrix}0&1\\1&0\end{bmatrix} +
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
+\begin{bmatrix}0&1\\1&0\end{bmatrix}
+\\
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+=& 
+\begin{bmatrix}1&0\\0&1\end{bmatrix} +
+\begin{bmatrix}1&0\\0&1\end{bmatrix}
+\\
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+=& 2\begin{bmatrix}1&0\\0&1\end{bmatrix}
+\\
+\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+=& 2\mathds{1}
+\end{align*}
+Therefore, $\boxed{\left\{\hat{\sigma}_j,\hat{\sigma}_k\right\}_+  = 2\mathds{1}\delta_{jk}}$.\\
+\\
+\textbf{I think that I might need more examples here}
+\subsection*{(d)} 
+Use the commutation and anti-commutation relations to prove the product rule:
 \begin{align*}
 \hat{\sigma}_j \hat{\sigma}_k =& \sigma_{jk} + i\sum_l \epsilon_{jkl}\sigma_l
 \end{align*}
+\begin{align*}
+(\sigma _{j}\sigma _{k}-\sigma _{k}\sigma _{j})+(\sigma _{j}\sigma _{k}+\sigma _{k}\sigma _{j})&=
+\left[\sigma_{j},\sigma _{k}\right]+\{\sigma _{j},\sigma _{k}\}
 \\
+2\sigma _{j}\sigma _{k} =& 2\mathds{1}\delta_{jk} + 2i\sum_l \epsilon_{jkl}\hat{\sigma}_l
 \\
-\section{Spin in a magnetic field}
+\sigma _{j}\sigma _{k} =& \mathds{1}\delta_{jk} + i\sum_l \epsilon_{jkl}\hat{\sigma}_l
+\\
+\end{align*}
 
+
+
+
+\section{Spin in a magnetic field}
 \begin{align*}
 i\hbar \dfrac{\partial}{\partial t} |\chi(t)\rangle =& -\mu\cdot B|\chi(t)\rangle
-\end{align*}\\
-\\
-(a) Write down the classical equation of motion for the spin using Newton's second law. In other words, write an equation of the time evolution of the angular moment by setting the time
-derivative of angular momentum equal to the torque.
+\end{align*}
+\subsection*{(a)}
+Write down the classical equation of motion for spin using Newton's second law. In other words, write an equation of the time evolution of the angular moment by setting the time derivative of angular momentum equal to the torque.
 \begin{align*}
 F =& ma
-\\
-F =& m \dfrac{d^2}{dt^2}r
 \\
 \tau =& F\cdot r
 \\
@@ -119,9 +246,48 @@ F =& m \dfrac{d^2}{dt^2}r
 \dfrac{d\omega}{dt} =& ma\cdot r
 \end{align*}
 
+\subsection*{(b)}
+Use Ehrenfest’s theorem to derive the equivalent quantum mechanical description of the time evolution of the expectation value of the spin, $\langle S\rangle$. To simplify the calculation without loss of
+generality, choose $B = \hat{z}$.
+
+\subsection*{(c)}
+Give an explicit expression for the time evolution of the state of the system if $\textbf{B} = B\hat{x}$ and at time $t = 0$ the system is in a state $\chi(0) = |+, z\rangle$.
+
+\subsection*{(d)}
+Calculate the expectation value $\langle S_z(t)\rangle$ and $\langle S_x(t)\rangle$.
 
 
 
+\section{Stern-Gerlach experiment}
+Consider a modification of the Stern-Gerlach Experiment no. 3 from lecture. First, an unpolarized beam  with $N_0$ spin $-\frac{1}{2}$ particles passes through a Stern-Gerlach apparatus aligned along the $\hat{z}$-direction and only those particles with their spin pointing along the positive $\hat{z}$ direction are allowed to enter the second Stern-Gerlach device. Unlike the example in lecture, however, the second magnet is aligned along an arbitrary direction $\hat{n}$. Similarly, only spins that point along the positive $\hat{n}$ direction are permitted to continue to the last SG device aligned along $\hat{z}$. The number of up and down spins are both measured leaving the third device.
+
+\subsection*{(a)}
+If the second device points in the $x - z$ plane with an angle $\theta$ relative to $\hat{z}$ (i.e. the polar angle $\phi =0$), what is the number of spin in state $|-,z\rangle$? Check your answer by orienting $\hat{n}$ along $\hat{z}$ and along $\hat{x}$.
+
+\subsection*{(b)}
+Calculate the uncertainty $\Delta S_z$ and explain its angular dependence.
+
+
+
+\section{Rotation of spin states}
+In this problem, you will demonstrate that
+\begin{align*}
+\hat{R}_n (\alpha) \equiv& exp\left[-i\alpha\dfrac{\hat{S}_n}{\hbar}\right] = exp\left[i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right]
+\end{align*}
+is the rotation operator for a spin $-\frac{1}{2}$ particle for a rotation of an angle $\alpha$ about the $\hat{n}$ axis. Here the component of the spin operator along $\hat{n}$ is expressed in terms of Pauli matrices, $ \hat{S}_n = \frac{\hbar}{2}\hat{n}\cdot\hat{\sigma}$.
+
+\subsection*{(a)}
+In order to be able to evaluate the operator, expand $\hat{R}_n(\alpha)$ in a Taylor-series, and use the properties of Pauli matrices to show,
+\begin{align*}
+\hat{R}_n (\alpha) =& \mathds{1} \cos\dfrac{\alpha}{2}-i\hat{n}\cdot\hat{\sigma}\sin\dfrac{\alpha}{2}
+\end{align*}
+Demonstrate that is is a unitary matrix. Compare your answer to the unitary matrix you calculated in the tutorial and discuss the connection between the two. 
+
+\subsection*{(b)}
+Evaluate the operator $\hat{R}_n(\alpha)\hat{S}_z\hat{R}_n(\alpha)^\dagger$ in terms of $\hat{S}_x$, $\hat{S}_y$, $\hat{S}_z$.
+
+\subsection*{(c)}
+Calculate $|\chi\rangle = \hat{R}_y |+,z\rangle$. For what operator $|\chi\rangle$ an eigenstate with eigenvalue $\hbar/2$? Explain why we can think of $\hat{R}_y(\alpha)$ as a rotation operator. (This result can be generalized to $\hat{R}_y(\alpha)$). There is, however, a very surprising result from this exercise: through what angle must you rotate the spin in order to get back to the initial state$|+,z\langle$? Spin is a very bizarre quantity indeed!
 
 
 
