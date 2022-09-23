@@ -249,6 +249,26 @@ F =& ma
 \subsection*{(b)}
 Use Ehrenfest’s theorem to derive the equivalent quantum mechanical description of the time evolution of the expectation value of the spin, $\langle S\rangle$. To simplify the calculation without loss of
 generality, choose $B = \hat{z}$.
+\begin{align*}
+\omega =& \gamma B_0
+\\
+F =& \Delta(\mu\cdot B) = \gamma\alpha\left(-S_x\hat{i}+S_z\hat{k}\right)
+\end{align*}
+Below is some older solutions that I think are false.
+\begin{align*}
+\dfrac{d}{dt}\langle\hat{A}\rangle =& \dfrac{1}{i\hbar}\langle[\hat{A}\hat{H}]\rangle + \langle \dfrac{\partial\hat{A}}{\partial t}\rangle
+\\
+\dfrac{d}{dt}\langle\hat{S}\rangle =& \dfrac{1}{i\hbar}\langle[\hat{S}\hat{H}]\rangle + \langle \dfrac{\partial\hat{S}}{\partial t}\rangle
+\\
+\langle \dfrac{\partial\hat{S}}{\partial t}\rangle =& 0 
+\\
+\dfrac{d}{dt}\langle\hat{S}\rangle =& \dfrac{1}{i\hbar}\langle[\hat{S}\hat{H}]\rangle
+\end{align*}
+\begin{align*}
+m\dfrac{d}{dt}\langle\hat{x}\rangle =& \langle\hat{p}\rangle
+\\
+\dfrac{d}{dt}\langle\hat{p}\rangle =& \langle-\frac{\partial}{\partial x}\hat{V}(\hat{x})\rangle
+\end{align*}
 
 \subsection*{(c)}
 Give an explicit expression for the time evolution of the state of the system if $\textbf{B} = B\hat{x}$ and at time $t = 0$ the system is in a state $\chi(0) = |+, z\rangle$.
@@ -263,6 +283,11 @@ Consider a modification of the Stern-Gerlach Experiment no. 3 from lecture. Firs
 
 \subsection*{(a)}
 If the second device points in the $x - z$ plane with an angle $\theta$ relative to $\hat{z}$ (i.e. the polar angle $\phi =0$), what is the number of spin in state $|-,z\rangle$? Check your answer by orienting $\hat{n}$ along $\hat{z}$ and along $\hat{x}$.
+\begin{align*}
+\mathbb{P}_n|\psi\rangle =& \sum_{i=\pm} |i,n\rangle\langle i,n |\psi\rangle
+\\
+=& |+,n\rangle\langle+,n|\psi\rangle - |-,n\rangle\langle -, n|\psi\rangle
+\end{align*}
 
 \subsection*{(b)}
 Calculate the uncertainty $\Delta S_z$ and explain its angular dependence.
@@ -282,30 +307,46 @@ In order to be able to evaluate the operator, expand $\hat{R}_n(\alpha)$ in a Ta
 \hat{R}_n (\alpha) =& \mathds{1} \cos\dfrac{\alpha}{2}-i\hat{n}\cdot\hat{\sigma}\sin\dfrac{\alpha}{2}
 \end{align*}
 Demonstrate that is is a unitary matrix. Compare your answer to the unitary matrix you calculated in the tutorial and discuss the connection between the two. 
+\begin{align*}
+\hat{R}_n (\alpha) =& exp\left[-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right]
+\\
+\hat{R}_n (\alpha) =& 1 + 
+\left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right) + 
+\dfrac{\left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right)^2}{2!} +
+\dfrac{\left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right)^3}{3!} + \dots
+\\
+\hat{R}_n (\alpha)=& \left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right) + 
+\dfrac{\left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right)^3}{3!} + \dots
+\\
++& 1 + \dfrac{\left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right)^2}{2!} +
+\dfrac{\left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right)^4}{4!} + \dots
+\\
+\\
+\\
+\hat{R}_n (\alpha)=& \left(-i\dfrac{\alpha}{2}\hat{n}\cdot{\sigma}\right) + \dfrac{\mathds{1}i\hat{n}\cdot{\sigma}\left(\dfrac{\alpha}{2}\right)^3}{3!} - \dots 
+\\
++& 1 - \dfrac{\mathds{1}\left(\dfrac{\alpha}{2}\right)^2}{2!} + \dfrac{\mathds{1}\left(\dfrac{\alpha}{2}\right)^4}{4!} - \dots 
+\\
+\hat{R}_n (\alpha)=& -i\hat{n}\cdot{\sigma}\left[\left(\dfrac{\alpha}{2}\right) - \dfrac{\mathds{1}\left(\dfrac{\alpha}{2}\right)^3}{3!} + \dots \right]
+\\
++& 1 - \dfrac{\mathds{1}\left(\dfrac{\alpha}{2}\right)^2}{2!} + \dfrac{\mathds{1}\left(\dfrac{\alpha}{2}\right)^4}{4!} + \dots 
+\\
+\hat{R}_n (\alpha)=& -i\hat{n}\cdot{\sigma}\sin(\alpha/2)
+\\
++& \mathds{1}\cos(\alpha/2) 
+\\
+\hat{R}_n (\alpha)=& \boxed{ \mathds{1}\cos(\alpha/2) -i\hat{n}\cdot{\sigma}\sin(\alpha/2) }
+\end{align*}
 
 \subsection*{(b)}
 Evaluate the operator $\hat{R}_n(\alpha)\hat{S}_z\hat{R}_n(\alpha)^\dagger$ in terms of $\hat{S}_x$, $\hat{S}_y$, $\hat{S}_z$.
+\begin{align*}
+\hat{S}_z =& 
+\end{align*}
 
 \subsection*{(c)}
 Calculate $|\chi\rangle = \hat{R}_y |+,z\rangle$. For what operator $|\chi\rangle$ an eigenstate with eigenvalue $\hbar/2$? Explain why we can think of $\hat{R}_y(\alpha)$ as a rotation operator. (This result can be generalized to $\hat{R}_y(\alpha)$). There is, however, a very surprising result from this exercise: through what angle must you rotate the spin in order to get back to the initial state$|+,z\langle$? Spin is a very bizarre quantity indeed!
 
-
-
-
-\section*{2022-09-21 Lecture Notes}
-
-There's a problem on the board that tells you that if you know the probability of finding a particle in the positive z spin state, then you can derive the probability of finding it in the positive x spin state. \\
-\\
-The total angular momentum of a system is kinda weird because \\
-\\
-Particle 1 has a basis $\lbrace |+\rangle_1, |-\rangle_1\rbrace$\\
-\\
-Particle 2 has a basis $\lbrace |+\rangle_2, |-\rangle_2\rbrace$\\
-\\
-basis for the system is a weird combination of of both of them . It kinda seems like a dot product but I dont know\\
-\\
-\subsection*{Tensor product Spaces}
-There's a lot of symbols here that make it inefficient to type in latex. 
 
 
 
